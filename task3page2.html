@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(235, 241, 245, 0.9), rgba(245, 247, 250, 0.95)), url('https://unsplash.com') no-repeat center center;
+            background-size: cover;
+            color: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 2px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1a365d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "📋";
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 12px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff9f43;
+            border-bottom: 2px solid #ff9f43;
+        }
+
+        .container {
+            flex: 1;
+            padding: 80px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1a365d;
+            letter-spacing: -0.5px;
+        }
+
+        .courses-layout {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .course-block {
+            width: 48%;
+        }
+
+        .course-block h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a365d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+
+        .course-block ul,
+        .course-block ol {
+            padding-left: 20px;
+        }
+
+        .course-block li {
+            color: #475569;
+            font-size: 1.05rem;
+            margin-bottom: 14px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .course-block li:hover {
+            color: #ff9f43;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ABC Training Institute</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Our Courses</h1>
+
+        <div class="courses-layout">
+            <div class="course-block">
+                <h2>• Web Development:</h2>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>React JS</li>
+                </ul>
+            </div>
+
+            <div class="course-block">
+                <h2>• Programming Languages:</h2>
+                <ol>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
