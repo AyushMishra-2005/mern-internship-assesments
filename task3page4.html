@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(235, 241, 245, 0.9), rgba(245, 247, 250, 0.95)), url('https://unsplash.com') no-repeat center center;
+            background-size: cover;
+            color: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 2px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1a365d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "📋";
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 12px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff9f43;
+            border-bottom: 2px solid #ff9f43;
+        }
+
+        .container {
+            flex: 1;
+            padding: 60px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 45px;
+            color: #1a365d;
+            letter-spacing: -0.5px;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-row label {
+            width: 140px;
+            font-size: 1rem;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        .form-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background-color: #f8fafc;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            border-color: #ff9f43;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(255, 159, 67, 0.15);
+        }
+
+        textarea.form-input {
+            height: 90px;
+            resize: none;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .gender-options label {
+            width: auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        .gender-options input[type="radio"] {
+            accent-color: #ff9f43;
+            width: 16px;
+            height: 16px;
+        }
+
+        .submit-btn {
+            background-color: #ff9f43;
+            color: #ffffff;
+            border: none;
+            padding: 12px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            display: block;
+            margin: 35px auto 0 auto;
+            box-shadow: 0 4px 12px rgba(255, 159, 67, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #e68a2e;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(255, 159, 67, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ABC Training Institute</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Student Registration</h1>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Registration Saved!');">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-input" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-input" required>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" class="form-input" required>
+            </div>
+
+            <div class="form-row">
+                <label for="course">Select Course:</label>
+                <select id="course" class="form-input">
+                    <option value="html-css">HTML & CSS</option>
+                    <option value="java">Java</option>
+                    <option value="react">React JS</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Message:</label>
+                <textarea id="message" class="form-input"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
