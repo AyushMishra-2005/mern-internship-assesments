@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h2>AuthSystem</h2>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="welcome"></h1>
+
+            <p>
+                Welcome to your dashboard. You have successfully
+                logged in and can now access all available features.
+            </p>
+
+            <a href="#" class="explore-btn">
+                Explore Dashboard
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Profile</h3>
+            <p>Manage your account information and settings.</p>
+        </div>
+
+        <div class="card">
+            <h3>Security</h3>
+            <p>Keep your account secure with proper authentication.</p>
+        </div>
+
+        <div class="card">
+            <h3>Dashboard</h3>
+            <p>Access all your tools and features in one place.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>AuthSystem</h3>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <p>© 2026 AuthSystem. All Rights Reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+
+</body>
+</html>
